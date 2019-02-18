@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Home";
 import Main from "./Main";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const NavRoutes = () => {
   return (

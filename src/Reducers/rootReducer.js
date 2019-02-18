@@ -1,5 +1,5 @@
 const initState = {
-  items: []
+  items: [{ id: 1, content: "asdad" }]
 };
 
 const rootReducer = (state = initState, action) => {

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import List from "./List";
+import AddItem from "./AddItem";
 
-const Main = () => {
-  return (
-    <div>
-      <h3>Main</h3>
-    </div>
-  );
+class Main extends Component {
+  render() {
+    console.log(this.props);
+    return (
+      <div className="container center-align">
+        <AddItem />
+        <List />
+      </div>
+    );
+  }
+}
+const mapStateToProps = state => {
+  return {
+    items: state.items
+  };
 };
 
-export default Main;
+export default connect(mapStateToProps)(Main);

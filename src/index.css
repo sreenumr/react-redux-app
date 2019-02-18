@@ -16,3 +16,7 @@ code {
 .active {
   color: #a02121;
 }
+
+#item {
+  width: 300px;
+}

@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar-fixed">
-      <nav>
+      <nav className="lime">
         <div className="nav-wrapper right">
           <ul>
             <li>
