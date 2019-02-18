@@ -19,5 +19,3 @@ export default class AddItem extends Component {
     );
   }
 }
-
-const mapDispatchToProps = () => {};

@@ -2,13 +2,24 @@ import React from "react";
 import { connect } from "react-redux";
 
 const List = ({ items }) => {
-  console.log(items);
+  console.log(items.length);
+
+  const itemList = !items.length ? (
+    <p>ListEmpty</p>
+  ) : (
+    items.map(item => {
+      return (
+        <div className="card lime" key={item.id} id="item">
+          {item.content}
+        </div>
+      );
+    })
+  );
+
   return (
-    <div>
+    <div className="container center-align">
       <p>List</p>
-      <label>
-        <p>{}</p>
-      </label>
+      {itemList}
     </div>
   );
 };
