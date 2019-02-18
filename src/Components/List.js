@@ -13,8 +13,8 @@ const List = ({ items }) => {
         <li key={item.id} className="collection-item">
           <label>
             <h6> {item.content}</h6>
-            <Modify />
           </label>
+          <Modify />
         </li>
       );
     })
