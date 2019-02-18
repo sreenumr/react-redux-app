@@ -5,8 +5,8 @@ import DecButton from "./DecButton";
 const Modify = () => {
   return (
     <div className="row right">
-      <IncButton />
       <DecButton />
+      <IncButton />
     </div>
   );
 };
