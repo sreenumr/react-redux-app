@@ -9,19 +9,14 @@ const List = ({ items }) => {
   ) : (
     items.map(item => {
       return (
-        <div className="card lime" key={item.id} id="item">
+        <div className="card orange" key={item.id} id="item">
           {item.content}
         </div>
       );
     })
   );
 
-  return (
-    <div className="container center-align">
-      <p>List</p>
-      {itemList}
-    </div>
-  );
+  return <div className="container">{itemList}</div>;
 };
 
 const mapStateToProps = state => {

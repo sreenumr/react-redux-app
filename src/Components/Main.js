@@ -4,7 +4,6 @@ import List from "./List";
 import AddItem from "./AddItem";
 
 const Main = ({ items }) => {
-  // render() {
   console.log(items);
   return (
     <div className="container center-align">
@@ -12,7 +11,6 @@ const Main = ({ items }) => {
       <List />
     </div>
   );
-  // }
 };
 const mapStateToProps = state => {
   return {
