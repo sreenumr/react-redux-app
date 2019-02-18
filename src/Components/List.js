@@ -10,7 +10,7 @@ const List = ({ items }) => {
   ) : (
     items.map(item => {
       return (
-        <li className="collection-item">
+        <li key={item.id} className="collection-item">
           <label>
             <h6> {item.content}</h6>
             <Modify />
