@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Modify from "./Modify";
 
 const List = ({ items }) => {
   console.log(items.length);
@@ -9,14 +10,17 @@ const List = ({ items }) => {
   ) : (
     items.map(item => {
       return (
-        <div className="card orange" key={item.id} id="item">
-          {item.content}
-        </div>
+        <li className="collection-item">
+          <label>
+            <h6> {item.content}</h6>
+            <Modify />
+          </label>
+        </li>
       );
     })
   );
 
-  return <div className="container">{itemList}</div>;
+  return <ul className="collection">{itemList}</ul>;
 };
 
 const mapStateToProps = state => {

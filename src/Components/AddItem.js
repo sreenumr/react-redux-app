@@ -13,12 +13,10 @@ class AddItem extends Component {
     console.log(this.props.items);
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          <input id="item" type="text" />
-          <button className="btn-floating waves-effect waves-light red">
-            +
-          </button>
-        </label>
+        <input id="item" type="text" />
+        <button className="btn-floating waves-effect waves-light red s1">
+          +
+        </button>
       </form>
     );
   }
