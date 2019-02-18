@@ -5,7 +5,8 @@ class AddItem extends Component {
   handleSubmit = e => {
     e.preventDefault();
     //console.log(e.target[0].value);
-    this.props.addItem(e.target[0].value);
+    const item = e.target[0].value;
+    if (item !== "") this.props.addItem(item);
   };
 
   render() {
