@@ -17,6 +17,10 @@ const rootReducer = (state = initState, action) => {
       };
     }
 
+    case "ADD_QTY": {
+      return null;
+    }
+
     default:
       return state;
   }

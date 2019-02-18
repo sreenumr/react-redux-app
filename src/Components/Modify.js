@@ -5,7 +5,7 @@ import Quantity from "./Quantity";
 
 const Modify = () => {
   return (
-    <div className="row right">
+    <div className="row right" id="modify">
       <DecButton />
       <Quantity />
       <IncButton />

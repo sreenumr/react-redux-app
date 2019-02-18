@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Quantity = ({ quantity }) => {
-  return <h3>{quantity}</h3>;
+  return <p className="col s1">{quantity}</p>;
 };
 
 const mapStateToProps = state => {

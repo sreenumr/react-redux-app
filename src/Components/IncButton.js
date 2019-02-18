@@ -1,13 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const IncButton = () => {
   return (
-    <div className="col s1">
-      <button id="inc" className="btn-floating waves-effect waves-light red">
-        +
-      </button>
-    </div>
+    <button className="col s1" id="inc">
+      +
+    </button>
   );
 };
 
-export default IncButton;
+const mapDispatchToProps = dispatch => {
+  return {
+    incItem: id => {
+      dispatch({ type: "INC_ITEM", id: id });
+    }
+  };
+};
+export default connect(mapDispatchToProps)(IncButton);

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import AddQuantity from "./AddQuantity";
 
 class AddItem extends Component {
   handleSubmit = e => {
@@ -12,12 +13,14 @@ class AddItem extends Component {
   render() {
     console.log(this.props.items);
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input id="item" type="text" />
-        <button className="btn-floating waves-effect waves-light red s1">
-          +
-        </button>
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input id="item" type="text" />
+          <button>+</button>
+          &nbsp;
+        </form>
+        <AddQuantity />
+      </div>
     );
   }
 }

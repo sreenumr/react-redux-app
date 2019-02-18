@@ -20,3 +20,16 @@ code {
 #item {
   width: 300px;
 }
+
+#qty {
+  width: 75px;
+}
+
+#inc,
+#dec {
+  width: 3px;
+}
+
+#modify > * {
+  margin: 1px;
+}

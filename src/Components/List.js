@@ -10,17 +10,15 @@ const List = ({ items }) => {
   ) : (
     items.map(item => {
       return (
-        <li key={item.id} className="collection-item">
-          <label>
-            <h6> {item.content}</h6>
-          </label>
+        <div className="collection-item" key={item.id}>
+          {item.content}
           <Modify />
-        </li>
+        </div>
       );
     })
   );
 
-  return <ul className="collection">{itemList}</ul>;
+  return <div className="row collection">{itemList}</div>;
 };
 
 const mapStateToProps = state => {
