@@ -3,17 +3,17 @@ import { connect } from "react-redux";
 import List from "./List";
 import AddItem from "./AddItem";
 
-class Main extends Component {
-  render() {
-    console.log(this.props);
-    return (
-      <div className="container center-align">
-        <AddItem />
-        <List />
-      </div>
-    );
-  }
-}
+const Main = ({ items }) => {
+  // render() {
+  console.log(items);
+  return (
+    <div className="container center-align">
+      <AddItem />
+      <List />
+    </div>
+  );
+  // }
+};
 const mapStateToProps = state => {
   return {
     items: state.items

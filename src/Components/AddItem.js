@@ -9,7 +9,7 @@ export default class AddItem extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} />
-        <label for="itemInput">
+        <label>
           <input id="item" type="text" />
           <button className="btn-floating waves-effect waves-light red">
             +
@@ -19,3 +19,5 @@ export default class AddItem extends Component {
     );
   }
 }
+
+const mapDispatchToProps = () => {};

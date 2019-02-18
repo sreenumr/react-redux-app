@@ -1,14 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const List = () => {
+const List = ({ items }) => {
+  console.log(items);
   return (
     <div>
       <p>List</p>
-      {/* <label><p>{Item Name}</p></label> */}
+      <label>
+        <p>{}</p>
+      </label>
     </div>
   );
 };
 
-const mapStateToProps = state => {};
+const mapStateToProps = state => {
+  return {
+    items: state.items
+  };
+};
 
-export default List;
+export default connect(mapStateToProps)(List);
