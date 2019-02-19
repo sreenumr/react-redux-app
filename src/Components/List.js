@@ -7,26 +7,31 @@ const List = ({ items }) => {
 
   if (!items) return <p>Loading..</p>;
 
-  const itemList = !items.length ? (
-    <p>ListEmpty</p>
-  ) : (
-    items.map(item => {
-      return (
-        <div
-          className="row collection-item"
-          id="list-container"
-          key={item.name}
-        >
-          <div className="col">{item.name}</div>
-          <div className="col">
-            <Modify />
-          </div>
-        </div>
-      );
-    })
-  );
+  items.forEach(item => {
+    console.log(item.name);
+    console.log(item.quantity);
+  });
 
-  return <div className="collection">{itemList}</div>;
+  // const itemList = !items.length ? (
+  //   <p>ListEmpty</p>
+  // ) : (
+  //   items.map(item => {
+  //     return (
+  //       <div
+  //         className="row collection-item"
+  //         id="list-container"
+  //         key={item.name}
+  //       >
+  //         <div className="col">{item.name}</div>
+  //         <div className="col">
+  //           <Modify />
+  //         </div>
+  //       </div>
+  //     );
+  //   })
+  // );
+  return null;
+  // return <div className="collection">{itemList}</div>;
 };
 
 const mapStateToProps = state => {
