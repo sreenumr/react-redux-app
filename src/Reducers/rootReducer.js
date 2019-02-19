@@ -25,6 +25,10 @@ const rootReducer = (state = initState, action) => {
       return null;
     }
 
+    case "STATE_INIT": {
+      return { ...state, items: action.itemList };
+    }
+
     default:
       return state;
   }

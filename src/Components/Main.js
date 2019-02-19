@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import List from "./List";
 import AddItem from "./AddItem";
 
-const Main = ({ items }) => {
+const Main = () => {
   return (
     <div className="container center-align">
       <AddItem />

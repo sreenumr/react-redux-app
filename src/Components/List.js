@@ -1,16 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
 import Modify from "./Modify";
-import AddQuantity from "./AddQuantity";
 
 const List = ({ items }) => {
+  console.log(items);
+
+  if (!items) return <p>Loading..</p>;
+
   const itemList = !items.length ? (
     <p>ListEmpty</p>
   ) : (
     items.map(item => {
       return (
-        <div className="row collection-item" id="list-container" key={item.id}>
-          <div className="col">{item.content}</div>
+        <div
+          className="row collection-item"
+          id="list-container"
+          key={item.name}
+        >
+          <div className="col">{item.name}</div>
           <div className="col">
             <Modify />
           </div>
