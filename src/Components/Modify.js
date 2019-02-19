@@ -1,16 +1,18 @@
 import React from "react";
-import IncButton from "./IncButton";
-import DecButton from "./DecButton";
-import Quantity from "./Quantity";
+import { connect } from "react-redux";
 
-const Modify = () => {
+const Modify = ({ qty }) => {
   return (
-    <div className="row right" id="modify">
-      <DecButton />
-      <Quantity />
-      <IncButton />
+    <div id="qty">
+      <input type="number" value={qty} />
     </div>
   );
 };
 
-export default Modify;
+const mapStateToProps = state => {
+  return {
+    qty: state.qty
+  };
+};
+
+export default connect(mapStateToProps)(Modify);

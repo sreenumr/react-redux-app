@@ -2,17 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class AddQuantity extends Component {
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(e.target[0].value);
-  };
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        Qty
-        <input id="qty" type="number" />
-      </form>
+      <div className="container">
+        <input id="qty" type="number" min="1" />
+      </div>
     );
   }
 }

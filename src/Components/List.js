@@ -1,24 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
 import Modify from "./Modify";
+import AddQuantity from "./AddQuantity";
 
 const List = ({ items }) => {
-  console.log(items.length);
-
   const itemList = !items.length ? (
     <p>ListEmpty</p>
   ) : (
     items.map(item => {
       return (
-        <div className="collection-item" key={item.id}>
-          {item.content}
-          <Modify />
+        <div className="row collection-item" id="list-container" key={item.id}>
+          <div className="col">{item.content}</div>
+          <div className="col">
+            <Modify />
+          </div>
         </div>
       );
     })
   );
 
-  return <div className="row collection">{itemList}</div>;
+  return <div className="collection">{itemList}</div>;
 };
 
 const mapStateToProps = state => {

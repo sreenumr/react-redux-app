@@ -8,7 +8,11 @@ const rootReducer = (state = initState, action) => {
     case "ADD_ITEM": {
       let newItems = [
         ...state.items,
-        { id: Math.random(), content: action.content, quantity: 1 }
+        {
+          id: Math.random(),
+          content: action.content,
+          qty: action.qty.toString()
+        }
       ];
       console.log(newItems);
       return {

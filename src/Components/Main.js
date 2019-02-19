@@ -4,7 +4,6 @@ import List from "./List";
 import AddItem from "./AddItem";
 
 const Main = ({ items }) => {
-  console.log(items);
   return (
     <div className="container center-align">
       <AddItem />

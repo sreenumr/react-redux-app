@@ -22,14 +22,15 @@ code {
 }
 
 #qty {
-  width: 75px;
+  width: 70px;
 }
 
-#inc,
-#dec {
-  width: 3px;
+#list-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-#modify > * {
-  margin: 1px;
+.collection .collection-item {
+  padding: 0px;
 }
