@@ -11,7 +11,7 @@ const Modify = ({ qty }) => {
 
 const mapStateToProps = state => {
   return {
-    qty: state.qty
+    qty: state.quantity
   };
 };
 
